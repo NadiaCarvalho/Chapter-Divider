@@ -34,14 +34,14 @@ public class Chapter {
 		this.body = "";
 		for (int i = 0; i < parts.length; i++) {
 			String p;
-			if (parts[i].contains("Chapter"))
+			if (parts[i].contains("Chapter") || parts[i].contains("CHAPTER"))
 				p = "<h1> " + parts[i].replace("\n\n", "") + " </h1>\n\n";
 			else if (parts[i].contains("Prologue") || parts[i].contains("Epilogue"))
 				p = "<h2> " + parts[i].replace("\n\n", "") + " </h2>\n\n";
 			else if (!parts[i].contains("<h1>") && !parts[i].contains("<h3>"))
 				p = "<p style=\"text-align: justify;\">" + parts[i].replace("\n\n", "") + " </p>\n\n";
 			else
-				p = parts[i];
+				p = parts[i] + "\n";
 			parts[i] = p;
 			this.body += parts[i];
 		}

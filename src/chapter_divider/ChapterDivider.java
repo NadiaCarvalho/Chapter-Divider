@@ -43,7 +43,7 @@ public class ChapterDivider {
 					+ "or insert the name of the file you want to divide \n");
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			System.out.print("Enter String");
+			System.out.print("Enter String: ");
 
 			String filePath = br.readLine();
 			chapterDivider = new ChapterDivider(filePath);
@@ -70,7 +70,7 @@ public class ChapterDivider {
 			} else
 				this.run(this.file);
 
-			System.out.println("End Of Convertion");
+			System.out.println("\nEnd Of Convertion");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
